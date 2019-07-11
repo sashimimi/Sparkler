@@ -1,0 +1,10 @@
+main: io.github.sashimimi.sparkler.Sparkler
+name: Sparkler
+version: 1.0.0
+author: sashimimi
+api-version: 1.13
+
+commands:
+   sp:
+     description: Main command for Sparkler.
+     usage: /sp
