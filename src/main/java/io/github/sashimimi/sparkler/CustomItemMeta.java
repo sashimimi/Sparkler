@@ -44,7 +44,7 @@ public class CustomItemMeta
 		return item;
 	}
 	
-	public static ItemStack customFireworks(List<String> colors, FireworkEffect.Type type)
+	public static ItemStack customFireworks(List<Color> colors, FireworkEffect.Type type)
 	{
 		ItemStack item = new ItemStack(Material.FIREWORK_ROCKET, 64);
 		FireworkMeta meta = (FireworkMeta) item.getItemMeta();
