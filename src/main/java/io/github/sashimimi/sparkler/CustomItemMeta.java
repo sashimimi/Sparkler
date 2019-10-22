@@ -14,8 +14,25 @@ import org.bukkit.inventory.meta.BannerMeta;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 
+/**
+ * Creates various custom items relating to US Independence Day,
+ * ranging from armor, banners, and fireworks.
+ * 
+ * @author sashimimi
+ * @version 1.0.0
+ * @since 1.0.0
+ * @since October 22, 2019
+ *
+ */
+
 public class CustomItemMeta 
 {
+	/**
+	 * Creates an American banner custom item.
+	 * 
+	 * @since 1.0.0
+	 * @return the created banner
+	 */
 	public static ItemStack americanBanner()
 	{
 		ItemStack item = new ItemStack(Material.RED_BANNER, 1);
@@ -31,6 +48,13 @@ public class CustomItemMeta
 		return item;
 	}
 	
+	/**
+	 * Creates a single piece of custom armor.
+	 * 
+	 * @param material 	the leather armor type to dye
+	 * @param color 	the color the armor should be
+	 * @return 			the created armor
+	 */
 	public static ItemStack customLeatherArmor(Material material, Color color)
 	{
 		ItemStack item = new ItemStack(material, 1);
@@ -44,6 +68,13 @@ public class CustomItemMeta
 		return item;
 	}
 	
+	/**
+	 * Creates 64 custom fireworks.
+	 * 
+	 * @param colors 	the colors of the firework
+	 * @param type 		the type of firework
+	 * @return 
+	 */
 	public static ItemStack customFireworks(List<Color> colors, FireworkEffect.Type type)
 	{
 		ItemStack item = new ItemStack(Material.FIREWORK_ROCKET, 64);

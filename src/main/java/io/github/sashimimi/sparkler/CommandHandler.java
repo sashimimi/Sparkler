@@ -13,15 +13,38 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.PlayerInventory;
 import io.github.sashimimi.sparkler.CustomItemMeta;
 
+/**
+ * Handles in-game commands sent by the player to activate the plugin.
+ * 
+ * @author sashimimi
+ * @version 1.0.0
+ * @since 1.0.0
+ * @since October 22, 2019
+ *
+ */
 public class CommandHandler implements CommandExecutor
 {
-	public Sparkler main;
-	
 	public CommandHandler(Sparkler main)
 	{
-		this.main = main;
+		Sparkler.getInstance();
 	}
 
+	/**
+	 * Processes player commands to determine what command was being sent,
+	 * and executes the process necessary.
+	 * <br/><br/>
+	 * Commands include:
+	 * <ul>
+	 * <li>/sp banner</li>
+	 * <li>/sp armor</li>
+	 * <li>/sp firework</li>
+	 * <li>/sp</li>
+	 * </ul>
+	 *
+	 * @since 1.0.0
+	 * @returns true if the command matches and was successfully ran, false otherwise
+	 * 
+	 */
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
 		if (cmd.getName().equalsIgnoreCase("sp"))
